@@ -1,0 +1,10 @@
+Interface : 
+- Employé de contrat ( contrat@kamk.dj avec mdp = Admin2024)
+- Employé de maintenance ( maintenance@kamk.dj avec mdp=Admin2024)
+
+- client ( abdirachidhochkadar@gmail.com avec mdp=R9yLP4n!Z$)
+- client ( abdirachidhoch12@gmail.com avec mdp=JtQwCKDNKM)
+-client(koulsaidmed@gmail.com avec mdp=12345678)
+
+
+- Administrateur (admin@kamk.dj avec mdp=Admin2024)

@@ -1,0 +1,240 @@
+/* =====================================================
+   KAMK — Thème sombre/clair partagé sur tout le site
+   Inclure dans chaque page : <link rel="stylesheet" href="../assets/theme.css">
+   (depuis pages/) ou <link rel="stylesheet" href="assets/theme.css"> (depuis racine)
+   ===================================================== */
+
+/* ===== TOGGLE BOUTON ===== */
+.theme-toggle {
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(0,0,0,0.12);
+    background: transparent;
+    cursor: pointer;
+    font-size: 1.1rem;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+.theme-toggle:hover {
+    background: rgba(0,122,61,0.08);
+    transform: rotate(20deg);
+    border-color: rgba(0,122,61,0.3);
+}
+
+/* ===== TRANSITION GLOBALE ===== */
+*, *::before, *::after {
+    transition:
+        background-color 0.35s ease,
+        background 0.35s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease !important;
+}
+
+/* ===== MODE SOMBRE ===== */
+body.dark-mode {
+    --green:        #00A052;
+    --green-dim:    #007A3D;
+    --blue:         #29B6F6;
+    --blue-dim:     #0288D1;
+    --red:          #EF5350;
+    --accent:       #00A052;
+    --bg-page:      #0A1628;
+    --bg-white:     #111F33;
+    --bg-light:     #162035;
+    --bg-dark:      #060D1A;
+    --border:       rgba(255,255,255,0.07);
+    --text-black:   #E8EDF5;
+    --text-dark:    #E8EDF5;
+    --text-mid:     #B0BEC5;
+    --text-grey:    #78909C;
+    background-color: #0A1628 !important;
+    color: #E8EDF5 !important;
+}
+
+/* Body background image overlay sombre */
+body.dark-mode {
+    background-image:
+        linear-gradient(rgba(10,22,40,0.96), rgba(10,22,40,0.96)),
+        url('../images/bg_djibouti.png') !important;
+}
+
+/* Header */
+body.dark-mode header {
+    background: rgba(10,22,40,0.98) !important;
+    border-bottom-color: #007A3D !important;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.4) !important;
+}
+body.dark-mode .logo-sub { color: rgba(255,255,255,0.4) !important; }
+body.dark-mode nav ul li a { color: rgba(255,255,255,0.65) !important; }
+body.dark-mode nav ul li a:hover,
+body.dark-mode nav ul li a.active { color: #00A052 !important; }
+body.dark-mode .btn-nav {
+    border-color: #00A052 !important;
+    color: #00A052 !important;
+}
+body.dark-mode .btn-nav:hover {
+    background: #00A052 !important;
+    color: #fff !important;
+}
+body.dark-mode .theme-toggle {
+    border-color: rgba(255,255,255,0.15) !important;
+}
+body.dark-mode .theme-toggle:hover {
+    background: rgba(255,255,255,0.06) !important;
+}
+
+/* Textes généraux */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5 { color: #E8EDF5 !important; }
+body.dark-mode .section-title { color: #00A052 !important; }
+body.dark-mode .section-title em { color: #29B6F6 !important; }
+body.dark-mode p { color: rgba(232,237,245,0.78) !important; }
+body.dark-mode li { color: rgba(232,237,245,0.78) !important; }
+body.dark-mode .section-eyebrow span { color: #00A052 !important; }
+
+/* Sections */
+body.dark-mode .section-services,
+body.dark-mode .section-highlight,
+body.dark-mode .section-map,
+body.dark-mode .section-meteo { background: #0A1628 !important; }
+
+body.dark-mode .section-fleet,
+body.dark-mode .section-types,
+body.dark-mode .section-avis,
+body.dark-mode .section-pub { background: #0D1B2A !important; }
+
+/* Cartes */
+body.dark-mode .fleet-card,
+body.dark-mode .service-card,
+body.dark-mode .type-card,
+body.dark-mode .avis-card {
+    background: #111F33 !important;
+    border-color: rgba(255,255,255,0.07) !important;
+}
+body.dark-mode .fleet-card h4 { color: #00A052 !important; }
+body.dark-mode .fleet-card p { color: rgba(232,237,245,0.7) !important; }
+body.dark-mode .service-card h4 { color: #00A052 !important; }
+body.dark-mode .type-card { border-color: rgba(255,255,255,0.07) !important; }
+
+/* Highlight section */
+body.dark-mode .highlight-inner {
+    background: #111F33 !important;
+    border-color: rgba(255,255,255,0.07) !important;
+}
+body.dark-mode .highlight-content {
+    background: #111F33 !important;
+}
+body.dark-mode .features-list li { color: rgba(232,237,245,0.78) !important; }
+
+/* Spec items catalogue */
+body.dark-mode .spec-item { background: #162035 !important; }
+body.dark-mode .specs-grid { background: rgba(255,255,255,0.04) !important; }
+body.dark-mode .card-name { color: #E8EDF5 !important; }
+body.dark-mode .card-brand { color: #29B6F6 !important; }
+body.dark-mode .card-year { color: rgba(255,255,255,0.4) !important; }
+body.dark-mode .vehicle-card {
+    background: #111F33 !important;
+    border-color: rgba(255,255,255,0.07) !important;
+}
+body.dark-mode .vehicle-card:hover {
+    border-color: rgba(0,160,80,0.3) !important;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.4) !important;
+}
+
+/* Footer */
+body.dark-mode footer { background: #060D1A !important; }
+body.dark-mode .footer-col p { color: rgba(255,255,255,0.5) !important; }
+body.dark-mode .footer-col ul li a { color: rgba(255,255,255,0.5) !important; }
+body.dark-mode .footer-col ul li a:hover { color: #fff !important; }
+body.dark-mode .footer-bottom { border-top-color: rgba(255,255,255,0.06) !important; }
+
+/* Formulaires */
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background: #162035 !important;
+    border-color: rgba(255,255,255,0.1) !important;
+    color: #E8EDF5 !important;
+}
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder { color: rgba(255,255,255,0.3) !important; }
+body.dark-mode label { color: rgba(232,237,245,0.8) !important; }
+
+/* Modales */
+body.dark-mode .modal-overlay { background: rgba(0,0,0,0.8) !important; }
+body.dark-mode .modal-box {
+    background: #111F33 !important;
+    border-color: rgba(255,255,255,0.08) !important;
+}
+
+/* Tarifs */
+body.dark-mode .tarif-card,
+body.dark-mode .tab-content { background: #111F33 !important; }
+body.dark-mode .tab-btn { color: rgba(255,255,255,0.6) !important; }
+body.dark-mode .tab-btn.active { color: #00A052 !important; }
+body.dark-mode table { border-color: rgba(255,255,255,0.07) !important; }
+body.dark-mode th { background: #162035 !important; color: #E8EDF5 !important; }
+body.dark-mode td { border-color: rgba(255,255,255,0.05) !important; color: rgba(232,237,245,0.78) !important; }
+
+/* Contact */
+body.dark-mode .contact-card {
+    background: #111F33 !important;
+    border-color: rgba(255,255,255,0.07) !important;
+}
+
+/* Tutoriel */
+body.dark-mode .tuto-sidebar,
+body.dark-mode .chapter {
+    background: #111F33 !important;
+    border-color: rgba(255,255,255,0.07) !important;
+}
+body.dark-mode .nav-link { color: rgba(255,255,255,0.55) !important; }
+body.dark-mode .nav-link.active { color: #00A052 !important; }
+
+/* Connexion / Inscription */
+body.dark-mode .auth-panel {
+    background: #111F33 !important;
+    border-color: rgba(255,255,255,0.07) !important;
+}
+
+/* Chatbot */
+body.dark-mode .quick-q {
+    background: #162035 !important;
+    border-color: rgba(255,255,255,0.08) !important;
+    color: rgba(255,255,255,0.75) !important;
+}
+
+/* Scrollbar */
+body.dark-mode ::-webkit-scrollbar-track { background: #0A1628; }
+body.dark-mode ::-webkit-scrollbar-thumb { background: rgba(0,160,80,0.4); }
+
+/* ===== MODE SOMBRE — MÊME RÈGLE CONTRASTE ===== */
+/* Fond sombre global → tout en clair */
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode span,
+body.dark-mode div { color: rgba(232,237,245,0.85); }
+
+/* Titres → vert clair */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 { color: #00A052 !important; }
+
+body.dark-mode h1 em,
+body.dark-mode h2 em,
+body.dark-mode h3 em { color: #29B6F6 !important; }
+
+/* Sections encore plus sombres en mode dark → texte blanc pur */
+body.dark-mode .section-cta *,
+body.dark-mode .hero *,
+body.dark-mode footer * { color: rgba(255,255,255,0.85) !important; }
+
+/* Nav en mode sombre */
+body.dark-mode nav ul li a { color: rgba(255,255,255,0.7) !important; }
+body.dark-mode nav ul li a:hover { color: #00A052 !important; }
